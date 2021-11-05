@@ -60,6 +60,9 @@ const post = [
 const container = document.getElementById('container');
 container.innerHTML= '';
 
+
+
+
 // 1 per ogni object creo un div class post
 
 for(let index in post){
@@ -105,11 +108,13 @@ for(let index in post){
 
 let likeButton = document.getElementsByClassName('js-like-button');
 
-console.log(likeButton);
-
 for(let i = 0; i < likeButton.length; i++){
+
+
   likeButton[i].addEventListener('click', function(){
-    console.log('ciao');
+    post[i].likesNumbers++
+
+    console.log(post[i].likesNumbers);
   })
 }
 
