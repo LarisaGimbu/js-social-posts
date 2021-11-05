@@ -5,12 +5,15 @@
 */
 
 const d = new Date();
+const day = d.getDay();
+const month = d.getMonth();
+const year = d.getFullYear();
 
 const post = [
   {
     authorName: 'Phil Mangione',
     profilePictures:'https://unsplash.it/300/300?image=15',
-    data: [d.getDay(), d.getMonth(), d.getFullYear()], 
+    data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
     content:'https://unsplash.it/600/300?image=171',
     likesNumbers: 80
@@ -18,7 +21,7 @@ const post = [
   {
     authorName: 'Sofia Perlari"',
     profilePictures:'https://unsplash.it/300/300?image=10',
-    data: [d.getDay(), d.getMonth(), d.getFullYear()], 
+    data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
     content:'https://unsplash.it/600/400?image=112',
     likesNumbers: 120
@@ -26,7 +29,7 @@ const post = [
   {
     authorName: 'Chiara Passaro',
     profilePictures:'https://unsplash.it/300/300?image=20',
-    data: [d.getDay(), d.getMonth(), d.getFullYear()], 
+    data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
     content:'https://unsplash.it/600/400?image=234',
     likesNumbers: 78
@@ -34,7 +37,7 @@ const post = [
   {
     authorName: 'Luca Formicola',
     profilePictures: null,
-    data: [d.getDay(), d.getMonth(), d.getFullYear()], 
+    data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
     content:'https://unsplash.it/600/400?image=24',
     likesNumbers: 56
@@ -42,7 +45,7 @@ const post = [
   {
     authorName: 'Alessandro Sainato',
     profilePictures:'https://unsplash.it/300/300?image=29',
-    data: [d.getDay(), d.getMonth(), d.getFullYear()], 
+    data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
     content:'https://unsplash.it/600/400?image=534',
     likesNumbers: 95
