@@ -101,5 +101,16 @@ for(let index in post){
   `
 }
 
-//Al 
+//Al click del like-button incrementare di uno i like
+
+let likeButton = document.getElementsByClassName('js-like-button');
+
+console.log(likeButton);
+
+for(let i = 0; i < likeButton.length; i++){
+  likeButton[i].addEventListener('click', function(){
+    console.log('ciao');
+  })
+}
+
 
