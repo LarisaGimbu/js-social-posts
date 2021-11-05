@@ -49,6 +49,45 @@ const post = [
   },
 ]
 
-console.log(post);
+const container = document.getElementById('container');
+container.innerHTML= '';
+// 1 per ogni object creo un div class post
 
+for(let index in post){
+  const divPost = document.createElement('div');
+  divPost.classList = 'post';
+  container.append(divPost);
+  
+  divPost.innerHTML = 
+  `
+    <div class="post__header">
+      <div class="post-meta">                    
+        <div class="post-meta__icon">
+          <img class="profile-pic" src="${post[index].profilePictures} " alt="Phil Mangione">                    
+        </div>
+        <div class="post-meta__data">
+          <div class="post-meta__author">${post[index].authorName} </div>
+          <div class="post-meta__time">${post[index].data} </div>
+        </div>                    
+      </div>
+    </div>
+    <div class="post__text">${post[index].postText} </div>
+    <div class="post__image">
+      <img src="${post[index].content}" alt="">
+    </div>
+    <div class="post__footer">
+      <div class="likes js-likes">
+        <div class="likes__cta">
+          <a class="like-button  js-like-button" href="#" data-postid="1">
+              <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+              <span class="like-button__label">Mi Piace</span>
+          </a>
+        </div>
+        <div class="likes__counter">
+          Piace a <b id="like-counter-1" class="js-likes-counter">${post[index].likesNumbers}</b> persone
+        </div>
+      </div> 
+    </div> 
+  `
+}
 
