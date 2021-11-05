@@ -12,6 +12,7 @@ const year = d.getFullYear();
 const post = [
   {
     authorName: 'Phil Mangione',
+    iniziali: 'P M',
     profilePictures:'https://unsplash.it/300/300?image=15',
     data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
@@ -20,6 +21,7 @@ const post = [
   },
   {
     authorName: 'Sofia Perlari"',
+    iniziali: 'S P',
     profilePictures:'https://unsplash.it/300/300?image=10',
     data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
@@ -28,6 +30,7 @@ const post = [
   },
   {
     authorName: 'Chiara Passaro',
+    iniziali: 'C P',
     profilePictures:'https://unsplash.it/300/300?image=20',
     data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
@@ -36,6 +39,7 @@ const post = [
   },
   {
     authorName: 'Luca Formicola',
+    iniziali: 'L F',
     profilePictures: null,
     data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
@@ -44,6 +48,7 @@ const post = [
   },
   {
     authorName: 'Alessandro Sainato',
+    iniziali: 'A S',
     profilePictures:'https://unsplash.it/300/300?image=29',
     data: `${day}/${month}/${year}`, 
     postText:'Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint voluptate recusandae architecto. Et nihil ullam aut alias.',
@@ -54,6 +59,7 @@ const post = [
 
 const container = document.getElementById('container');
 container.innerHTML= '';
+
 // 1 per ogni object creo un div class post
 
 for(let index in post){
@@ -61,12 +67,13 @@ for(let index in post){
   divPost.classList = 'post';
   container.append(divPost);
   
+  //dentro ogni div metto il contenuto del post
   divPost.innerHTML = 
   `
     <div class="post__header">
       <div class="post-meta">                    
         <div class="post-meta__icon">
-          <img class="profile-pic" src="${post[index].profilePictures} " alt="Phil Mangione">                    
+          <img class="profile-pic" src="${post[index].profilePictures} " alt="${post[index].iniziali}">                    
         </div>
         <div class="post-meta__data">
           <div class="post-meta__author">${post[index].authorName} </div>
@@ -93,4 +100,6 @@ for(let index in post){
     </div> 
   `
 }
+
+//Al 
 
