@@ -106,15 +106,32 @@ for(let index in posts){
     `
 }
 
-//Al click del like-button incrementare di uno i like
+//3. al click del like-button incrementare di uno i like
 
-let likeButton = document.getElementsByClassName('js-like-button');
+addLike();
+function addLike(){
+    
+    let likeButton = document.getElementsByClassName('js-like-button');
 
-for(let i = 0; i < likeButton.length; i++){
+    for(let i = 0; i < likeButton.length; i++){
 
-   likeButton[i].addEventListener('click', function(){
-    post[i].likesNumbers++
+        let clicked = false;
 
-    console.log(post[i].likesNumbers);
-  })
-  }
+        likeButton[i].addEventListener('click', function(){
+            
+            if(!clicked){
+                console.log('cliccato');
+
+                posts[i].likes++
+
+                console.log(posts[i].likes);
+
+                clicked = true;
+            }else{
+                console.log('hai già messo like a questo post');
+            }
+        })
+    }
+
+
+}
