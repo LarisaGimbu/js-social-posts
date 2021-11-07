@@ -111,14 +111,17 @@ for(let index in posts){
 addLike();
 function addLike(){
     
-    let likeButton = document.getElementsByClassName('js-like-button');
+    let likeButton = document.getElementsByClassName('like-button');
 
     for(let i = 0; i < likeButton.length; i++){
 
         let clicked = false;
 
+        
+
         likeButton[i].addEventListener('click', function(){
             
+
             if(!clicked){
                 console.log('cliccato');
 
@@ -127,6 +130,9 @@ function addLike(){
                 console.log(posts[i].likes);
 
                 clicked = true;
+
+                likeButton[i].classList = 'like-button--liked';
+
             }else{
                 console.log('hai già messo like a questo post');
             }
