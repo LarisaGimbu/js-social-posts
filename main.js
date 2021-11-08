@@ -56,14 +56,14 @@ const posts = [
     }
 ];
 
-const d = new Date();
-const day = d.getDay();
-const month = d.getMonth();
-const year = d.getFullYear();
-const date = `${day}/${month}/${year}`;
 
 const container = document.getElementById('container');
 container.innerHTML = '';
+
+const formatDate = (date) =>  {
+    
+    return date.split('-').reverse().join('/');
+}
 
 //1. per ogni object creo un div con class post
 
@@ -82,7 +82,7 @@ for(let index in posts){
                 </div>
                 <div class="post-meta__data">
                     <div class="post-meta__author">${posts[index].author.name} </div>
-                    <div class="post-meta__time">${date} </div>
+                    <div class="post-meta__time">${formatDate(posts[index].created)} </div>
                 </div>                    
             </div>
         </div>
